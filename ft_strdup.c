@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 16:26:08 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/18 23:01:00 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/24 17:15:52 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *strdup(const char *str)
     int counter;
     
     size = 0;
-    m = '\0';
+    m = 0;
     counter = 0;
     while (str[counter] != '\0')
     {
