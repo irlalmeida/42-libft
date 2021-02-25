@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 11:57:56 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/20 20:08:02 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 11:57:43 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void *ft_memchr(const void *b, int c, size_t len)
 {
-    unsigned int a;
+    size_t a;
     unsigned char *b_type;
     unsigned char c_type;
 
@@ -22,11 +22,11 @@ void *ft_memchr(const void *b, int c, size_t len)
     c_type = (unsigned char)c;
     
     a = 0;
-    while (b_type[a] != '\0' && b_type[a] != len)
+    while (a != len)
     {
         if (b_type[a] == c_type)
         {
-            return (b_type);
+            return (b_type+a);
         }
         a++;
     }
