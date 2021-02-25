@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 12:34:45 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/25 17:43:38 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 17:48:41 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,18 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-    int counter;
+        size_t counter;
+		size_t len;
 
-    counter = 0;
-    while (s[counter] != '\0' || s[counter] == c)
-    {
-        s++;
-        counter++;
-    }
-    
-    while (s[counter] != s[counter-counter])
+		len = strlen(s);
+		counter = len;
+	while (s[counter] != '\0' || s[counter] == c)
     {
         if (s[counter] == c)
-        {
-            return (char *)s;
-        }
+            return (char *)s+counter;
         counter--;
     }
-    s = NULL;
+    s = NULL; 
     return (char *)s;
+
 }
