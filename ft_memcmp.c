@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:54:33 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/25 13:55:05 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 13:56:15 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ int ft_memcmp(const void *b1, const void *b2, size_t len)
 			return (b1_type - b2_type);
     
 	}
+	return (0);
 }
