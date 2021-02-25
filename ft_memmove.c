@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:59:08 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/25 07:41:15 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 16:52:17 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 	dst_type = (char *)dst;
 	src_type = (char *)src;
 	size = 0;
-
+	if (!dst_type && src_type)
+		return(0);
+	
 	if (src_type < dst_type)
 		while (len > 0)
 		{
