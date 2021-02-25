@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:53:16 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/25 13:13:04 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 13:29:06 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void *ft_memcpy(void *dst, const void *src, size_t len)
     dst_type = (unsigned char *)dst;
     src_type = (unsigned char *)src;
 
-	if (dst_type == NULL || src == NULL || len == 0)
-		return (NULL);
+	if (counter == len)
+		return (dst);
 
     while ((counter < len))
     {
         dst_type[counter] = src_type[counter];
         counter++;
     }
-    return (dst);
+    return (dst_type);
 }
