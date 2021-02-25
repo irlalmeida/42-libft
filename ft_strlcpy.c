@@ -6,25 +6,25 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:45:06 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/20 20:06:44 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 20:42:35 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    size_t a;
+    size_t counter;
 
-    a = 0;
-    while (a < dstsize && src[a] != '\0')
+    counter = 0;
+    while (counter < dstsize && src[counter])
     {
-        dst[a] = src[a];
-        a++;
+        dst[counter] = src[counter];
+        counter++;
     }
-    while (a < dstsize)
+    while (counter < dstsize)
     {
-        dst[a] = '\0';
-        a++;
+        dst[counter] = '\0';
+        counter++;
     }
-    return (a);
+    return (dstsize);
 }
