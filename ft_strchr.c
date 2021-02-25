@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 16:35:25 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/25 17:36:41 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 17:37:20 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ char *ft_strchr(const char *s, int c)
         if (s[counter] == c)
             return (char *)s+counter;
         counter++;
-    } 
+    }
     s = NULL; 
     return (char *)s;
 
-	
 }
