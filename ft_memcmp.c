@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:54:33 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/25 13:56:15 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 13:57:37 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int ft_memcmp(const void *b1, const void *b2, size_t len)
     b2_type = (unsigned char *)b2;
 	a = 0;
 
-	if (len == 0 || b1_type == b2_type)
+	if (len == 0 || b1_type == b2_type || b1 == NULL || b2 == NULL)
 		return (0);
     while (a <= len)
     {
