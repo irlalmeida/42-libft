@@ -6,19 +6,19 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 17:46:09 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/18 23:00:47 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 20:10:48 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 size_t ft_strlen(const char *str)
 {
-    int a;
+    int counter;
 
-    a = 0;
-    while (str[a] != '\0')
+    counter = 0;
+    while (str[counter])
     {
-        a++;
+        counter++;
     }
-    return (a);
+    return (counter);
 }
