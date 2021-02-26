@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:56:17 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 18:55:24 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 18:57:32 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 static int	ft_isspace(const char *str)
 {
-	int counter;
+	int 		counter;
 
 	counter = 0;
-	while (str[counter] == '\v' || str[counter] == '\n' || str[counter] == '\t' || \
-	str[counter] == '\f' || str[counter] == '\r' || str[counter] == ' ')
+	while (str[counter] == '\v' || str[counter] == '\n' || str[counter] == '\t' \
+	|| str[counter] == '\f' || str[counter] == '\r' || str[counter] == ' ')
 		counter++;
 	return (counter);
 }
