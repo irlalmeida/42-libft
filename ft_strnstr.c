@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 13:01:38 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 14:02:06 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 14:04:00 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
     size_t counter;
 
     counter = 0;
-	if (!little)
+	if (!little || !big || !len)
 		return ((char *)big);
     while (big[counter] != '\0' && counter != len)
     {
