@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 16:26:08 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 14:42:41 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 14:45:33 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char *ft_strdup(const char *str)
     }
     m = malloc(size);
     
-    m = (char *)str;
-	return(m);
+    str = m;
+    return(m);
 }
