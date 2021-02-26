@@ -6,11 +6,11 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 13:01:38 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 16:29:33 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 16:30:28 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 //char *ft_strnstr(const char *big, const char *little, size_t len)
 //{
 //    //size_t i;
