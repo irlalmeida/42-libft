@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 12:59:07 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 18:10:45 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 19:03:44 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t len)
 	s2_type[counter] != '\0'))
 	{
 		if (s1_type[counter] != s2_type[counter])
-		{
 			return (s1_type[counter] - s2_type[counter]);
-		}
 		counter++;
 	}
 	return (0);
