@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 13:01:38 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 15:56:45 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 15:59:56 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 	
     i = 0;
 	j = 0;
-	if ((little == NULL) || (len == 0) || (little[0] == '\0'))
+	if (/*(little == NULL) ||*/ (len == 0) || (little[0] == '\0'))
 		return ((char *)big);
 	if ((little > big) || (big[0] == '\0'))
 		return (NULL);
