@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 16:26:08 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 14:45:33 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 17:12:31 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,18 @@ char *ft_strdup(const char *str)
     counter = 0;
     while (str[counter] != '\0')
     {
-        str++;
+        counter++;
         size++;
     }
-    m = malloc(size);
-    
-    str = m;
-    return(m);
+    m = malloc(size+1);
+	if (!m)
+		return (NULL);
+	counter = 0;
+	while (str[counter] != '\0')
+	{
+		m[counter] = str[counter];
+		counter++;
+	}
+
+    return (m);
 }
