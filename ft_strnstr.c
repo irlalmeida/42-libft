@@ -6,14 +6,14 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 13:01:38 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 16:28:16 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 16:29:33 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-char *ft_strnstr(const char *big, const char *little, size_t len)
-{
-    //size_t i;
+//#include "libft.h"
+//char *ft_strnstr(const char *big, const char *little, size_t len)
+//{
+//    //size_t i;
 	//size_t j;
 	//
     //i = 0;
@@ -40,7 +40,9 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 	//}
 	//return (0);
 
-	unsigned char    *m1;
+char    *ft_strnstr(const char *m, const char *n, size_t len)
+{
+    unsigned char    *m1;
     unsigned char    *n1;
     size_t            i;
     size_t            j;
@@ -62,5 +64,5 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
         i++;
     }
     return (0);
-
 }
+
