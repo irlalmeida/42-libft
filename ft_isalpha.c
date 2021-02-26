@@ -6,23 +6,23 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 18:27:14 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/18 23:02:00 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 17:44:43 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isalpha(int c)
+
+int	ft_isalpha(int c)
 {
-    int flag;
+	int flag;
 
-    flag =  '1';
-
-    if (!(c >= 97 && c <= 122))
-    {
-        if (!(c >= 65 && c <= 90))
-        {
-            return (0);
-        }
-    }
-    return (flag);
+	flag = '1';
+	if (!(c >= 97 && c <= 122))
+	{
+		if (!(c >= 65 && c <= 90))
+		{
+			return (0);
+		}
+	}
+	return (flag);
 }

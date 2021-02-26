@@ -6,20 +6,20 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:37:30 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/18 23:01:39 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 17:49:00 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isdigit(int a)
-{
-    int flag;
-    
-    flag = '1';
 
-    if (a >= 48 && a <= 57)
-    {
-        return (flag);
-    }
-    return (0);
+int	ft_isdigit(int a)
+{
+	int flag;
+
+	flag = '1';
+	if (a >= 48 && a <= 57)
+	{
+		return (flag);
+	}
+	return (0);
 }

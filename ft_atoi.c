@@ -6,24 +6,35 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:56:17 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 16:56:12 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 18:52:05 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_isspace(const char *str)
+{
+	int counter;
+
+	counter = 0;
+	while (str[counter] == '\v' || str[counter] == '\n' || str[counter] == '\t' || \
+	str[counter] == '\f' || str[counter] == '\r' || str[counter] == ' ')
+		counter++;
+	return (counter);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	long int res;
-	int negnum;
-	long int i;
+	long int	res;
+	int			negnum;
+	long int	i;
 
 	res = 0;
 	negnum = 0;
-	i = 0;
-	while (nptr[i] == '\v' ||nptr[i] == '\n'|| nptr[i] == '\t' || \
-	nptr[i] == '\f'||nptr[i] == '\r' ||nptr[i] == ' ')
-		i++;
+	i = ft_isspace(nptr);
+	/*while (nptr[i] == '\v' || nptr[i] == '\n' || nptr[i] == '\t' || \
+	nptr[i] == '\f' || nptr[i] == '\r' || nptr[i] == ' ')
+		i++;*/
 	if (nptr[i] == '-')
 	{
 		negnum = -1;
@@ -41,5 +52,5 @@ int	ft_atoi(const char *nptr)
 		return (negnum * res);
 	}
 	else
-		return(0);
+		return (0);
 }
