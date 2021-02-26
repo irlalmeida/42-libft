@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:56:17 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 16:45:39 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 16:50:29 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ int	ft_atoi(const char *nptr)
 	else
 		negnum = 1;
 	while (nptr[i] == '\v' ||nptr[i] == '\n'|| nptr[i] == '\t' || \
-	nptr[i] == '\f'||nptr[i] == '\r' )
+	nptr[i] == '\f'||nptr[i] == '\r')
 		i++;
-	if (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		if (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		while ((nptr[i] != '\0') && (nptr[i] >= '0' && nptr[i] <= '9'))
 		{
@@ -42,4 +43,5 @@ int	ft_atoi(const char *nptr)
 	}
 	else
 		return(0);
+	}
 }
