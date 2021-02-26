@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:45:06 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/25 22:47:05 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 22:48:00 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
         counter++;
     }
 	dst[counter] = '\0';
-    return (src[counter]);
+    return (ft_strlen(src));
 }
