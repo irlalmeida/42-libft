@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:56:17 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/23 16:44:21 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/25 21:28:36 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int res;
+	long int res;
 	int negnum;
-	int i;
+	long int i;
 
 	res = 0;
 	negnum = 0;
