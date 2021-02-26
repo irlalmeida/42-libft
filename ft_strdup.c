@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 16:26:08 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 17:12:31 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/26 17:15:39 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ char *ft_strdup(const char *str)
 		m[counter] = str[counter];
 		counter++;
 	}
-
+	m[counter] = '\0';
     return (m);
 }
