@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 09:31:33 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/27 10:22:43 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/27 10:23:23 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t size;
 	size_t strlen;
 
+	sub = 0;
 	counter = start;
 	size = 0;
 	strlen = ft_strlen(s);
