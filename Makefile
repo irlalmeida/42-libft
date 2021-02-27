@@ -24,6 +24,7 @@ FILES = ft_atoi.c     ft_isalpha.c \
 		ft_memcmp.c   ft_strchr.c \
 		ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_putstr_fd.c ft_putchar_fd.c \
+		ft_substr.c
 
 OBJ = $(FILES:.c=.o)
 
