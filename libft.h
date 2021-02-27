@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:45:32 by irlalmeida        #+#    #+#             */
-/*   Updated: 2021/02/26 18:45:58 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/27 08:13:39 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include	<stdio.h>
 #include	<string.h>
 #include	<stdlib.h>
+#include	<unistd.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -32,7 +33,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *scr, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 char	*ft_strchr(const char *s, int c);
-char	*strdup(const char *str);
+char	*ft_strdup(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *str);
@@ -41,4 +42,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int a);
 int		ft_toupper(int a);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 #endif
