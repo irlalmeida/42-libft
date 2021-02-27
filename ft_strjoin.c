@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 13:41:02 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/27 18:18:28 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/27 18:38:32 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	a = malloc(s1_len + s2_len);
-	while (s2[j] != '\0')
+	while (s2[j] != '\0' || (s1[i] == ' '))
 	{
-		while (s1[i] != '\0')
+		while ((s1[i] != '\0') || (s1[i] == ' ') )
 		{
 			a[i] = s1[i];
 			i++; 
