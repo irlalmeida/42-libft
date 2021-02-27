@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:56:17 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/26 19:01:53 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/27 19:57:12 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,19 @@ int			ft_atoi(const char *nptr)
 	long int	i;
 
 	res = 0;
-	negnum = 0;
+	negnum = 1;
 	i = ft_isspace(nptr);
 	if (nptr[i] == '-')
 	{
 		negnum = -1;
 		i++;
 	}
-	else
-		negnum = 1;
-	if (nptr[i] >= '0' && nptr[i] <= '9')
+	else if (nptr[i] == '+')
+		i++;
+	while (ft_isdigit(nptr[i]))
 	{
-		while ((nptr[i] != '\0') && (nptr[i] >= '0' && nptr[i] <= '9'))
-		{
-			res = res * 10 + nptr[i] - '0';
-			i++;
-		}
-		return (negnum * res);
+		res = res * 10 + nptr[i] - '0';
+		i++;
 	}
-	else
-		return (0);
+	return (negnum * res);
 }
