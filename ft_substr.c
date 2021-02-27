@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 09:31:33 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/27 10:17:11 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/27 10:19:20 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	counter = start;
 	size = 0;
-	strlen = ft_strlen(s);
-	if (start > strlen)
-		return (0);
+//	strlen = ft_strlen(s);
+//	if (start > strlen)
+//		return (0);
 	while ((s[counter] != '\0') && (counter <= len) )
 		counter++;
 	sub = malloc(len + 1);
