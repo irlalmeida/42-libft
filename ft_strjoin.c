@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 13:41:02 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/27 14:09:17 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/27 17:58:11 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		}
 	}
 	a[i + j] = '\0';
-	return [a];
+	return (a);
 }
