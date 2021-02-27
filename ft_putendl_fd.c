@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 07:59:19 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/27 08:10:23 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/02/27 13:20:40 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	int i;
-	int nl;
 
 	i = 0;
-	nl = '\0';
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
