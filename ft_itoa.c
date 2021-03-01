@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 14:58:33 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 15:38:51 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char	*ft_itoa(int n)
 		nbr /= 10;
 		len--;
 	}
+	num[len] = '\0';
 	return (num);
 }
