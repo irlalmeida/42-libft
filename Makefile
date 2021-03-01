@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
+#    Updated: 2021/03/01 14:12:14 by iribeiro         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
 
 NAME = libft.a
@@ -24,7 +36,8 @@ FILES = ft_atoi.c     ft_isalpha.c \
 		ft_memcmp.c   ft_strchr.c \
 		ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_putstr_fd.c ft_putchar_fd.c \
-		ft_substr.c ft_strjoin.c
+		ft_substr.c ft_strjoin.c \
+		ft_strmapi.c ft_itoa.c
 
 OBJ = $(FILES:.c=.o)
 

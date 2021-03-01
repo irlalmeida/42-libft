@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 17:46:09 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 14:11:20 by iribeiro         ###   ########.fr       */
+/*   Created: 2021/02/28 19:40:41 by iribeiro          #+#    #+#             */
+/*   Updated: 2021/03/01 14:11:25 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int counter;
+	int i;
+	char *m;
 
-	counter = 0;
-	while (str[counter])
+	if (!s)
+		return (NULL);
+	i = 0;
+	m = ft_strdup(s);
+	while (m[i] != '\0')
 	{
-		counter++;
+		m[i] = f(i, s[i]);
+		i++;
 	}
-	return (counter);
+	return (m);
 }

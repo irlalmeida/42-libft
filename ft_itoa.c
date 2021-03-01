@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 17:46:09 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 14:11:20 by iribeiro         ###   ########.fr       */
+/*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
+/*   Updated: 2021/03/01 14:47:53 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_itoa(int n)
 {
-	int counter;
+	char *num;
+	int nbr;
+	int len;
 
-	counter = 0;
-	while (str[counter])
+	nbr = n;
+	len = 0;
+	num = 0;
+	while (nbr > 1)
 	{
-		counter++;
+		nbr /= 10;
+		len++;
 	}
-	return (counter);
+	if (n < 0)
+		num[0] = '-';
+	num = malloc(len + 1);
+	nbr = n;
+	while (len > 0)
+	{
+		num[len] = (nbr % 10) + '0';
+		nbr /= 10;
+		len--;
+	}
+	return (num);
 }
