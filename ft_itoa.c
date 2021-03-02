@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 21:32:41 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 21:34:39 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_itoa(int n)
 		nbr_n /= 10;
 		len++;
 	}
+	if (!len)
+		return (0);
 	if (n < 0)
 	{
 		nbr = nbr * -1;
