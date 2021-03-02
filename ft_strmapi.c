@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 19:40:41 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 14:11:25 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 23:52:48 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = 0;
 	m = ft_strdup(s);
+	if (!m)
+		return (NULL);
 	while (m[i] != '\0')
 	{
 		m[i] = f(i, s[i]);
