@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 21:56:15 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 22:06:17 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,21 @@ char	*ft_itoa(int n)
 		nbr_n /= 10;
 		len++;
 	}
-	if (!len)
+	if (!len || (len == 0))
 		return (0);
 	if (n < 0)
 	{
-		nbr = nbr * -1;
+		nbr = (nbr * -1);
 		len++;
-		num = (char *)ft_calloc(len + 2, sizeof(char));
+		num = (char *)ft_calloc((len + 2), sizeof(char));
 		num[0] = '-';
 	}
 	else
-		num = (char *)ft_calloc(len + 1, sizeof(char));
+		num = (char *)ft_calloc((len + 1), sizeof(char));
+	
 	if (!num)
 		return (0);
-	while (len > 0 && nbr !=0)
+	while ((len > 0) && (nbr !=0))
 	{
 		num[len - 1] = ((nbr % 10) + '0');
 		len--;
