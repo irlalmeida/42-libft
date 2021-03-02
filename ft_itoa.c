@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 21:55:06 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 21:56:15 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ char	*ft_itoa(int n)
 		num[len - 1] = ((nbr % 10) + '0');
 		len--;
 		nbr /= 10;
-		printf("len %i\n",len);
+		//printf("len %i\n",len);
 	}
 	return (num);
 }
 
-int main (void)
+/*int main (void)
 {
-	printf("eai foi? %s\n", ft_itoa(2147483647));
-}
+	printf("eai foi? %s\n", ft_itoa(-0));
+}*/
