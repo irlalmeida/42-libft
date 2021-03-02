@@ -6,15 +6,14 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:45:32 by irlalmeida        #+#    #+#             */
-/*   Updated: 2021/03/02 14:42:50 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/02 19:18:51 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		LIBFT_H
-#define		LIBFT_H
-
-#include	<stdlib.h>
-#include	<unistd.h>
+#ifndef LIBFT_H
+#define  LIBFT_H
+#include <stdlib.h>
+#include <unistd.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -48,4 +47,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
+char	*ft_strtrim(char const *s1, char const *set);
 #endif
