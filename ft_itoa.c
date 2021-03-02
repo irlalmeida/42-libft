@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 23:39:41 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 23:43:35 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 	len = 0;
 	nbr_n = nbr;
 	if (n == 0)
-		return ("0");
+		return (ft_strdup("0"));
 	while (nbr_n != 0)
 	{
 		nbr_n /= 10;
