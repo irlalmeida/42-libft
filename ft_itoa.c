@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 21:37:55 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 21:55:06 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 char	*ft_itoa(int n)
 {
 	char *num;
-	int nbr;
+	unsigned int nbr;
 	int len;
 	int nbr_n;
 
 	nbr = n;
 	len = 0;
-	num = 0;
 	nbr_n = nbr;
+	num = 0;
 
 	if (n == 0)
 		return ("0");
@@ -38,8 +38,8 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		nbr = nbr * -1;
-		num = (char *)ft_calloc(len + 1, sizeof(char));
 		len++;
+		num = (char *)ft_calloc(len + 2, sizeof(char));
 		num[0] = '-';
 	}
 	else
@@ -51,12 +51,12 @@ char	*ft_itoa(int n)
 		num[len - 1] = ((nbr % 10) + '0');
 		len--;
 		nbr /= 10;
-		//printf("len %i\n",len);
+		printf("len %i\n",len);
 	}
 	return (num);
 }
 
-/*int main (void)
+int main (void)
 {
-	printf("eai foi? %s\n", ft_itoa(-2147483648));
-}*/
+	printf("eai foi? %s\n", ft_itoa(2147483647));
+}
