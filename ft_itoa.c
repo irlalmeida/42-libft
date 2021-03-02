@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 23:45:09 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 23:50:34 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,13 @@ char	*ft_itoa(int n)
 		nbr_n /= 10;
 		len++;
 	}
-	num = find_num(n, &len);
-	if (!num)
+	if (!(num = find_num(n, &len)))
 		return (NULL);
 	if (n < 0)
 		nbr = (nbr * (-1));
-	while ((len > 0) && (nbr != 0))
+	while (((len--) > 0) && (nbr != 0))
 	{
-		num[len - 1] = ((nbr % 10) + '0');
-		len--;
+		num[len] = ((nbr % 10) + '0');
 		nbr /= 10;
 	}
 	return (num);
