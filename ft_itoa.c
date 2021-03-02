@@ -6,50 +6,53 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 20:14:57 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 21:29:48 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 char	*ft_itoa(int n)
 {
 	char *num;
 	int nbr;
 	int len;
+	int nbr_n;
 
 	nbr = n;
 	len = 0;
 	num = 0;
+	nbr_n = nbr;
+
 	if (n == 0)
 		return ("0");
-	while (nbr > 0)
+	while (nbr_n != 0)
 	{
-		nbr /= 10;
+		nbr_n /= 10;
 		len++;
 	}
-	nbr = n;
 	if (n < 0)
 	{
-		num = malloc(len + 2);
+		nbr = nbr * -1;
+		num = (char *)ft_calloc(len + 1, sizeof(char));
+		len++;
 		num[0] = '-';
-		while (len > 1)
-		{
-			num[len] = (nbr % 10) + '0';
-			len--;
-			nbr /= 10;
-		}
 	}
 	else
+		num = (char *)ft_calloc(len + 1, sizeof(char));
+	while (len > 0 && nbr !=0)
 	{
-		num = malloc(len + 1);
-		while (len > 0)
-		{
-			num[len] = ((nbr % 10) + '0');
-			len--;
-			nbr /= 10;
-		}
+		num[len - 1] = ((nbr % 10) + '0');
+		len--;
+		nbr /= 10;
+		printf("len %i\n",len);
 	}
-	num[len] = '\0';
 	return (num);
 }
+
+/*int main (void)
+{
+	printf("eai foi? %s\n", ft_itoa(-2147483648));
+}*/
