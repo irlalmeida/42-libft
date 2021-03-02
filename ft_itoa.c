@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 12:35:59 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 21:34:39 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/01 21:36:30 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	*ft_itoa(int n)
 	}
 	else
 		num = (char *)ft_calloc(len + 1, sizeof(char));
+		if (!num)
+		return (0);
 	while (len > 0 && nbr !=0)
 	{
 		num[len - 1] = ((nbr % 10) + '0');
