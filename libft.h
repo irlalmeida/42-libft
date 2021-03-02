@@ -6,15 +6,13 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:45:32 by irlalmeida        #+#    #+#             */
-/*   Updated: 2021/03/01 14:12:04 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/02 14:42:50 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		HEADER
-#define		HEADER
-#include	<ctype.h>
-#include	<stdio.h>
-#include	<string.h>
+#ifndef		LIBFT_H
+#define		LIBFT_H
+
 #include	<stdlib.h>
 #include	<unistd.h>
 

@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 19:40:41 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/01 23:52:48 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/02 14:35:04 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
-	char *m;
+	int		i;
+	char	*m;
 
 	if (!s)
 		return (NULL);
