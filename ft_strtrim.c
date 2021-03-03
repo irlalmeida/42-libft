@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 14:11:41 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/02 20:17:13 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/02 22:12:38 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,27 +42,46 @@ int	setlen(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *erased;
-	int len;
 	int i;
-	int j;
+	int len;
 
-	erased = 0;
 	i = 0;
-	j = 0;
-	len = setlen(s1, set);
-	if (!s1)
-		return ft_strdup(0);
-	if (!set)
-		return ft_strdup(s1);
-	erased = ft_calloc((ft_strlen(s1) - len), sizeof(char));
-	if (!erased)
+	if (!s1 || !set)
 		return (NULL);
-	while (s1)
+	len = ft_strlen(set);
+	while(i < len)
 	{
-		erased[i] = s1[j + len];
-		j++;
+		ft_strchr(s1, set[i]);
 		i++;
 	}
-	return(erased);
+	while(len > 0)
+	{
+		ft_strchr(s1, set[len]);
+		len--;
+	}
+	if ((len - i + 1) <= 0)
+		return (ft_strdup(0));
+	return (ft_substr(s1, i, (len - i + 1)));
+		
+	//char *erased;
+	//int len;
+	//int i;
+	//int j;
+
+	//erased = 0;
+	//i = 0;
+	//j = 0;
+	//len = setlen(s1, set);
+	//if (!s1 || !set)
+	//	return (NULL);
+	//erased = ft_calloc((ft_strlen(s1) - len), sizeof(char));
+	//if (!erased)
+	//	return (NULL);
+	//while (s1)
+	//{
+	//	erased[i] = s1[j + len];
+	//	j++;
+	//	i++;
+	//}
+	//return(erased);
 }
