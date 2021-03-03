@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 14:11:41 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/02 22:14:16 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/02 22:23:59 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	len = ft_strlen(set);
-	while(i < len)
-	{
-		ft_strchr(s1, set[i]);
+	while(i < len && (ft_strchr(s1, set[i])))
 		i++;
-	}
-	while(len > 0)
-	{
-		ft_strchr(s1, set[len]);
+	while(len > 0 && (ft_strchr(s1, set[len])))
 		len--;
-	}
 	if ((len - i + 1) <= 0)
 		return (ft_strdup(0));
 	return (ft_substr(s1, i, (len - i + 1)));
-		
+
 	//char *erased;
 	//int len;
 	//int i;
