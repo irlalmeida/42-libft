@@ -6,39 +6,39 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 14:11:41 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/02 22:12:38 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/02 22:14:16 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	setlen(char const *s1, char const *set)
-{
-	int len;
-	int i;
-	int j;
-	int set_len;
-	//int backwards;
-	
-	i = 0;
-	set_len = 0;
-	len = ft_strlen(s1);
-	while (i < len)
-	{
-		while ((s1[i] != '\0'))
-		{
-			j = 0;
-			while ((set[j] == s1[i]) && (set[j] != '\0'))
-			{
-				set_len++;	
-				j++;
-			}
-			i++;
-		}
-	
-	}
-	return(set_len);
-}
+//int	setlen(char const *s1, char const *set)
+//{
+//	int len;
+//	int i;
+//	int j;
+//	int set_len;
+//	//int backwards;
+//	
+//	i = 0;
+//	set_len = 0;
+//	len = ft_strlen(s1);
+//	while (i < len)
+//	{
+//		while ((s1[i] != '\0'))
+//		{
+//			j = 0;
+//			while ((set[j] == s1[i]) && (set[j] != '\0'))
+//			{
+//				set_len++;	
+//				j++;
+//			}
+//			i++;
+//		}
+//	
+//	}
+//	return(set_len);
+//}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
