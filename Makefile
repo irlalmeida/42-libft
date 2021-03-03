@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
-#    Updated: 2021/03/02 19:19:13 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/03/02 22:50:48 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ FILES = ft_atoi.c     ft_isalpha.c \
 		ft_putstr_fd.c ft_putchar_fd.c \
 		ft_substr.c ft_strjoin.c \
 		ft_strmapi.c ft_itoa.c	\
-		ft_strtrim.c
+		ft_strtrim.c ft_split.c
 
 OBJ = $(FILES:.c=.o)
 
