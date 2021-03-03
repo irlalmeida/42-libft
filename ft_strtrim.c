@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 14:11:41 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/02 19:26:10 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/02 20:17:13 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,17 @@ int	setlen(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	while (i < len)
 	{
-		while ((set) )
+		while ((s1[i] != '\0'))
 		{
 			j = 0;
-			while ((set[j] == s1[i]) && set)
+			while ((set[j] == s1[i]) && (set[j] != '\0'))
 			{
 				set_len++;	
 				j++;
 			}
+			i++;
 		}
-		i++;
+	
 	}
 	return(set_len);
 }
