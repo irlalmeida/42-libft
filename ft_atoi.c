@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iribeiro <iribeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:56:17 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/02/27 19:57:12 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:22:05 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_isspace(const char *str)
 
 int			ft_atoi(const char *nptr)
 {
-	long int	res;
+	long double	res;
 	int			negnum;
 	long int	i;
 
