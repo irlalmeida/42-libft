@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:56:17 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/04 17:22:05 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:25:37 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_isspace(const char *str)
 
 int			ft_atoi(const char *nptr)
 {
-	long double	res;
+	long int	res;
 	int			negnum;
 	long int	i;
 
