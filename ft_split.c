@@ -6,8 +6,91 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 22:50:18 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/02 22:50:28 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:12:18 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+static size_t findWords(char const *s, char c)
+{
+	size_t words;
+	int j;
+
+	words = 0;
+	j = 0;
+	while((s[j] != '\0') && (s[j] == c))
+	{
+		j++;
+	}
+	while (s[j] != '\0')
+	{
+		while((s[j] != '\0') && (s[j] != c))
+		{
+			j++;
+		}
+		words++;
+		while((s[j] != '\0') && (s[j] == c))
+		{
+			j++;
+		}
+	}
+	return (words);
+}
+
+static size_t wordLen (char const *s, char c)
+{
+	size_t i;
+
+	i = 0;
+	while ((s[i] != '\0') && (s[i] != c))
+	{
+		i++;
+	}
+	return (i);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int i;
+	size_t words;
+	char **res;
+
+	i = -1;
+	if (!s)
+		return NULL;
+	words = findWords(s, c);
+	if (!(res = ft_calloc(words + 1, sizeof(char *))))
+		return (NULL);
+	words = 0;
+	while ((s[++i]))
+	{
+		if ((s[i] != c) && (s[i] != '\0'))
+		{
+			res[words] = ft_substr(s, i, wordLen(&s[i], c));
+			words++;
+			i = (i + wordLen(&s[i], c) - 1);
+		}
+	}
+	res[words] = NULL;
+	return (res);
+
+}
+
+//int main (void)
+//{
+//	char **p;
+//	int i;
+//
+//	i = 0;
+//	p = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+//	while (p[i])
+//	{
+//		printf("%s\n", p[i]);
+//		i++;
+//	}
+//	//printf("Deu bom a findWords? --> 3 = %zi\n", findWords("  string   em    string ", ' '));
+//	//printf("Deu bom a wordlen? --> 14 = %zi\n", wordLen("string em string", ' '));
+//	return (0);
+//}
