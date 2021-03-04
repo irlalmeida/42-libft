@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 22:50:18 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/04 17:12:18 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:16:10 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,19 +78,3 @@ char	**ft_split(char const *s, char c)
 
 }
 
-//int main (void)
-//{
-//	char **p;
-//	int i;
-//
-//	i = 0;
-//	p = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
-//	while (p[i])
-//	{
-//		printf("%s\n", p[i]);
-//		i++;
-//	}
-//	//printf("Deu bom a findWords? --> 3 = %zi\n", findWords("  string   em    string ", ' '));
-//	//printf("Deu bom a wordlen? --> 14 = %zi\n", wordLen("string em string", ' '));
-//	return (0);
-//}
