@@ -6,32 +6,32 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 22:50:18 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/04 17:16:10 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/04 22:13:40 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static size_t findWords(char const *s, char c)
+static size_t	findwords(char const *s, char c)
 {
-	size_t words;
-	int j;
+	size_t		words;
+	int			j;
 
 	words = 0;
 	j = 0;
-	while((s[j] != '\0') && (s[j] == c))
+	while ((s[j] != '\0') && (s[j] == c))
 	{
 		j++;
 	}
 	while (s[j] != '\0')
 	{
-		while((s[j] != '\0') && (s[j] != c))
+		while ((s[j] != '\0') && (s[j] != c))
 		{
 			j++;
 		}
 		words++;
-		while((s[j] != '\0') && (s[j] == c))
+		while ((s[j] != '\0') && (s[j] == c))
 		{
 			j++;
 		}
@@ -39,9 +39,9 @@ static size_t findWords(char const *s, char c)
 	return (words);
 }
 
-static size_t wordLen (char const *s, char c)
+static size_t	wordlen(char const *s, char c)
 {
-	size_t i;
+	size_t		i;
 
 	i = 0;
 	while ((s[i] != '\0') && (s[i] != c))
@@ -51,15 +51,15 @@ static size_t wordLen (char const *s, char c)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	int i;
-	size_t words;
-	char **res;
+	int		i;
+	size_t	words;
+	char	**res;
 
 	i = -1;
 	if (!s)
-		return NULL;
+		return (NULL);
 	words = findWords(s, c);
 	if (!(res = ft_calloc(words + 1, sizeof(char *))))
 		return (NULL);
@@ -75,6 +75,4 @@ char	**ft_split(char const *s, char c)
 	}
 	res[words] = NULL;
 	return (res);
-
 }
-
