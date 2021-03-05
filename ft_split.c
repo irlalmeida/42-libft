@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 22:50:18 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/04 22:13:40 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/04 22:18:25 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char			**ft_split(char const *s, char c)
 	i = -1;
 	if (!s)
 		return (NULL);
-	words = findWords(s, c);
+	words = findwords(s, c);
 	if (!(res = ft_calloc(words + 1, sizeof(char *))))
 		return (NULL);
 	words = 0;
@@ -68,9 +68,9 @@ char			**ft_split(char const *s, char c)
 	{
 		if ((s[i] != c) && (s[i] != '\0'))
 		{
-			res[words] = ft_substr(s, i, wordLen(&s[i], c));
+			res[words] = ft_substr(s, i, wordlen(&s[i], c));
 			words++;
-			i = (i + wordLen(&s[i], c) - 1);
+			i = (i + wordlen(&s[i], c) - 1);
 		}
 	}
 	res[words] = NULL;
