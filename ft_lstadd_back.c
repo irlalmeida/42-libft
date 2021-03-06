@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 15:13:22 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/06 16:27:34 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/06 16:32:24 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (*lst->next)
-		*lst = *lst->next;
-	*lst = new;
-	new->next = NULL;
+	ft_lstlast(*lst)->next = new;
 }
