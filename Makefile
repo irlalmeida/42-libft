@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
-#    Updated: 2021/03/06 16:04:35 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/03/06 16:13:43 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,5 +67,4 @@ re:
 	$(MAKE) all
 
 bonus:
-	$(NAME): $(OBJ_BONUS)
 	$(CLIB) $(NAME) $(OBJ_BONUS)
