@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
-#    Updated: 2021/03/02 22:50:48 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/03/06 16:04:35 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,12 +40,18 @@ FILES = ft_atoi.c     ft_isalpha.c \
 		ft_strmapi.c ft_itoa.c	\
 		ft_strtrim.c ft_split.c
 
+FILES_BONUS = ft_lstiter.c ft_lstlast.c \
+				ft_lstnew.c ft_lstsize.c \
+				ft_lstadd_back.c ft_lstadd_front.c \
+				ft_lstclear.c
+
 OBJ = $(FILES:.c=.o)
+OBJ_BONUS = $(FILES_BONUS: .c = .o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CLIB) $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(OBJ_BONUS)
+	$(CLIB) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 %.o: %.c %.h
 	$(CC) -o $@ $< $(CFLAGS)
@@ -60,6 +66,6 @@ re:
 	$(MAKE) fclean
 	$(MAKE) all
 
-so: 
-	$(CC) -fPIC $(CFLAGS) $(FILES)
-	gcc -shared -o libft.so $(OBJ)
+bonus:
+	$(NAME): $(OBJ_BONUS)
+	$(CLIB) $(NAME) $(OBJ_BONUS)
