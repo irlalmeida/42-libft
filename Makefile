@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
-#    Updated: 2021/03/06 16:13:43 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/03/06 16:16:18 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ FILES_BONUS = ft_lstiter.c ft_lstlast.c \
 				ft_lstclear.c
 
 OBJ = $(FILES:.c=.o)
-OBJ_BONUS = $(FILES_BONUS: .c = .o)
+OBJ_BONUS = $(FILES_BONUS:.c = .o)
 
 all: $(NAME)
 
@@ -67,4 +67,5 @@ re:
 	$(MAKE) all
 
 bonus:
+$(NAME): $(OBJ_BONUS)
 	$(CLIB) $(NAME) $(OBJ_BONUS)
