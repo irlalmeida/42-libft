@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 15:27:58 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/06 18:14:55 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/06 18:15:53 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	t_list *temp;
 
-	temp = NULL;
-	lst->next = temp;
+	temp = lst->next;
 	free(lst);
 	del(lst);
 	temp->next = lst;
