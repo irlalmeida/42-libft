@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
-#    Updated: 2021/03/06 16:20:12 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/03/06 17:51:40 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ $(NAME): $(OBJ) $(OBJ_BONUS)
 	$(CC) -o $@ $< $(CFLAGS)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
