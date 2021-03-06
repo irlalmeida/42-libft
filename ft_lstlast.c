@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 15:09:43 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/06 16:30:22 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/06 16:35:20 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ t_list *ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
-	while (lst)
+	while (lst->next != NULL)
 	{
 		lst = lst->next;
-		if (lst->next == NULL)
-			return (lst);
-		lst++;
 	}
+	if (lst->next == NULL)
+		return (lst);
 	return (NULL);
 }
