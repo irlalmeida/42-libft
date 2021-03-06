@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 21:45:32 by irlalmeida        #+#    #+#             */
-/*   Updated: 2021/03/06 15:53:23 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/06 16:26:49 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct	s_list
 	void	*content;
 	struct s_list	*next;
 }
-					t_list;
+				t_list;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
