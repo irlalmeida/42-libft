@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
-#    Updated: 2021/03/06 21:22:50 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/03/06 23:31:18 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +51,8 @@ OBJ_BONUS = $(FILES_BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(OBJ_BONUS)
-	$(CLIB) $(NAME) $(OBJ) $(OBJ_BONUS)
+$(NAME): $(OBJ)
+	$(CLIB) $(NAME) $(OBJ)
 
 %.o: %.c %.h
 	$(CC) -o $@ $< $(CFLAGS)
@@ -70,5 +70,9 @@ re:
 bonus:
 	$(OBJ_BONUS)
 	$(CLIB) $(NAME) $(OBJ_BONUS)
-%.o: %.c %.h
-	$(CC) -o $@ $< $(CFLAGS)
+
+rebonus:
+	$(MAKE) fclean
+	$(MAKE) bonus
+
+.PHONY:	all clean fclean re bonus rebonus
