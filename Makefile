@@ -6,7 +6,7 @@
 #    By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/01 14:12:10 by iribeiro          #+#    #+#              #
-#    Updated: 2021/03/06 18:47:06 by iribeiro         ###   ########.fr        #
+#    Updated: 2021/03/06 21:22:50 by iribeiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ FILES_BONUS = ft_lstiter.c ft_lstlast.c \
 				ft_lstnew.c ft_lstsize.c \
 				ft_lstadd_back.c ft_lstadd_front.c \
 				ft_lstclear.c ft_lstdelone.c \
+				ft_lstmap.c
 
 OBJ = $(FILES:.c=.o)
 OBJ_BONUS = $(FILES_BONUS:.c=.o)
