@@ -6,7 +6,7 @@
 /*   By: iribeiro <iribeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 21:07:18 by iribeiro          #+#    #+#             */
-/*   Updated: 2021/03/06 21:16:58 by iribeiro         ###   ########.fr       */
+/*   Updated: 2021/03/06 21:18:24 by iribeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 	if(!lst || !f )
 		return ;
-	while (lst->next != NULL)
+	while (lst != NULL)
 	{
 		temp = lst;
 		f(lst->content);
